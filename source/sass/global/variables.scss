@@ -1,8 +1,8 @@
 // Colors
-$color-default-black: #000000;
-$color-default-white: #ffffff;
-
-$gray1: #ECECEC;
+$black1: #333333;
+$white1: #ffffff;
+$gray1: #F0EBFF;
+$purple1: #7859CF;
 $gray2: #f1f1f1;
 $gray3: #e5e5e5;
 $gray4: #c6c6c6;
@@ -12,7 +12,6 @@ $green2: #46C1AE;
 $green3: #56C3B2;
 $green4: #149080;
 $green5: #62D1BA;
-$black1: #231F20;
 $black2: #444444;
 $red: #ff0000;
 $base-shadow: 0px 4px 20px rgba(0, 0, 0, 0.07);
@@ -26,15 +25,15 @@ $transition-long: 0.3s ease-in-out;
 $modal-settings: 0.1s cubic-bezier(0.55, 0, 0.1, 1);
 
 // Breakpoints
-$sm-max: 771.9px;
-$md: 772px;
-$md-max: 1149.9px;
-$lg: 1150px;
+$sm-max: 767.9px;
+$md: 768px;
+$md-max: 1439.9px;
+$lg: 1440px;
 
 // Retina
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
 
 // Padding
-$padding--md: 50px;
-$padding--sm: 30px;
+$padding--lg: 40px;
+$padding--sm: 20px;

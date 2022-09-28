@@ -18,12 +18,12 @@
 
   @include media(md) {
     max-width: $md-max;
-    padding-right: $padding--md;
-    padding-left: $padding--md;
   }
 
   @include media(lg) {
     max-width: $lg;
+    padding-right: $padding--lg;
+    padding-left: $padding--lg;
   }
 }
 

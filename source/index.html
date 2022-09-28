@@ -15,6 +15,90 @@
     <link rel="preload" href="fonts/Montserrat-Bold.woff" as="font" crossorigin="anonymous">
   </head>
   <body>
-    <script src="js/script.js"></script>
+    <header class="header header--no-js container">
+      <figure class="header__logo">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-mobile.svg" width="32" height="36" alt="Логотип компании Drink2Go." decoding="async">
+        </picture>
+
+        <figcaption>
+          Интернет-магазин кофейных напитков
+        </figcaption>
+      </figure>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-item">
+            <a>Главная</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#">Каталог</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#">О нас</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="header__user-list">
+        <li class="header__user-item">
+          <a href="#" class="header__user-link">
+            <svg width="16" height="16" role="img" aria-label="Кнопка для авторизации.">
+              <use href="img/sprite.svg#user-icon"></use>
+            </svg>
+
+            <span aria-hidden="true">Войти</span>
+          </a>
+        </li>
+
+        <li class="header__user-item">
+          <a href="#" class="header__user-link">
+            <svg width="16" height="16" role="img" aria-label="Кнопка для перехода в корзину.">
+              <use href="img/sprite.svg#cart-icon"></use>
+            </svg>
+
+            <span aria-hidden="true">Корзина</span>
+          </a>
+        </li>
+      </ul>
+
+      <button class="header__menu-button" type="button">
+        <span class="visually-hidden">Кнопка для открытия и скрытия меню страницы</span>
+      </button>
+    </header>
+
+    <section class="advantages">
+      <div class="advantages__wrapper">
+        <h2 class="advantages__title title">Как это работает</h2>
+        <ul class="advantages__list">
+          <li class="advantages__item advantages__item-eco">
+            <p class="advantages__lead">
+              Функциональное питание содержит только полезные питательные вещества.
+            </p>
+          </li>
+          <li class="advantages__item advantages__item-easy">
+            <p class="advantages__lead">
+              Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+            </p>
+          </li>
+          <li class="advantages__item advantages__item-change">
+            <p class="advantages__lead">
+              Замените один-два приема обычной еды на наше функциональное питание.
+            </p>
+          </li>
+          <li class="advantages__item advantages__item-result">
+            <p class="advantages__lead">
+              Уже через месяц наслаждайтесь изменениями к лучшему&nbsp;<br>вашего питомца!
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <script src="js/script.js" type="module"></script>
   </body>
 </html>

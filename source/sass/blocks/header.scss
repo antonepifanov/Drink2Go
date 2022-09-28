@@ -1,0 +1,275 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include media(md) {
+    flex-wrap: nowrap;
+  }
+
+  &--no-js {
+    .header__menu-button {
+      display: none;
+    }
+  }
+
+  &--opened {
+    .header__nav {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+
+      @include media(md) {
+        position: static;
+      }
+    }
+
+    .header__menu-button {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 16px;
+        height: 2px;
+        background-color: $black1;
+      }
+
+      &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+
+  &--closed {
+    .header__nav {
+      display: none;
+    }
+
+    .header__menu-button {
+      &::before {
+        content: "";
+        width: 16px;
+        height: 2px;
+        background-color: $black1;
+        box-shadow: 0 6px 0 0 $black1, 0 -6px 0 0 $black1;
+      }
+    }
+  }
+}
+
+.header__logo {
+  margin: 0;
+  display: flex;
+  align-items: center;
+
+  @include media(lg) {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  img {
+    display: block;
+
+    @include media(md) {
+      width: 82px;
+      height: 36px;
+    }
+
+    @include media(lg) {
+      width: 170px;
+      height: 36px;
+    }
+  }
+
+  figcaption {
+    display: none;
+
+    @include media(lg) {
+      display: block;
+      max-width: 126px;
+      font-size: 12px;
+      line-height: 1.33;
+    }
+  }
+}
+
+.header__nav {
+  order: 1;
+  margin-left: calc(-1 * #{$padding--sm});
+  margin-right: calc(-1 * #{$padding--sm});
+  width: calc(100% + (#{$padding--sm} * 2));
+  background-color: $white1;
+  z-index: 20;
+
+  @include media (md) {
+    order: initial;
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
+  }
+}
+
+.header__nav-list {
+  @include listres;
+  border-top: 1px solid $gray1;
+
+  @include media(md) {
+    border-top: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  @include media(lg) {
+    gap: 20px;
+  }
+}
+
+.header__nav-item {
+  a {
+    display: grid;
+    place-items: center;
+    min-height: 57px;
+    padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.33;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: $black1;
+    border-bottom: 1px solid $gray1;
+    transition: color $default-transition-settings, background-color $default-transition-settings;
+
+    @include media(md) {
+      min-height: 80px;
+      border-bottom: none;
+    }
+
+    &:not([href]) {
+      @include media(md) {
+        color: $purple1;
+        border-bottom: 2px solid $purple1;
+      }
+    }
+
+    &[href]:hover {
+      @include media(md) {
+        color: $purple1;
+      }
+    }
+
+    &[href]:active {
+      background-color: $gray1;
+    }
+
+    &[href]:focus-visible {
+      @include media(md) {
+        outline: none;
+        color: $purple1;
+      }
+    }
+  }
+}
+
+.header__user-list {
+  @include listres;
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+
+  @include media(md) {
+    margin-right: 0;
+  }
+
+  @include media(lg) {
+    gap: 20px;
+  }
+}
+
+.header__user-link {
+  @include btnres;
+  text-decoration: none;
+  width: 60px;
+  height: 60px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $black1;
+  transition: background-color $default-transition-settings, color $default-transition-settings;
+
+  @include media(md) {
+    height: 80px;
+  }
+
+  @include media(lg) {
+    width: auto;
+    gap: 8px;
+  }
+
+  &:hover {
+    @include media(md) {
+      color: $purple1;
+    }
+  }
+
+  &:active {
+    background-color: $gray1;
+  }
+
+  &:focus-visible {
+    @include media(md) {
+      outline: none;
+      color: $purple1;
+    }
+  }
+
+  span {
+    display: none;
+
+    @include media(lg) {
+      text-transform: uppercase;
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.33;
+      letter-spacing: 0.02em;
+      transition: color $default-transition-settings;
+    }
+  }
+
+  svg {
+    transition: color $default-transition-settings;
+  }
+}
+
+.header__menu-button {
+  @include btnres;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  transition: background-color $default-transition-settings;
+
+  @include media(md) {
+    display: none;
+  };
+
+  &:active {
+    background-color: $gray1;
+  }
+}
