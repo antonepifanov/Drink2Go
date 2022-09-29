@@ -212,7 +212,7 @@
   }
 
   .swiper-pagination-bullet {
-    cursor: pointer;
+    @include btnres;
     width: 62px;
     height: 24px;
     background-color: $white1;
@@ -222,6 +222,18 @@
     transition: background-color $default-transition-settings;
 
     &:hover {
+      &:not(.swiper-pagination-bullet-active) {
+        background-color: rgba($purple1, 0.25);
+      }
+    }
+
+    &:active {
+      &:not(.swiper-pagination-bullet-active) {
+        background-color: $purple1;
+      }
+    }
+
+    &:focus-visible {
       &:not(.swiper-pagination-bullet-active) {
         background-color: rgba($purple1, 0.25);
       }
@@ -258,10 +270,6 @@
   &--prev {
     left: 0;
 
-    @include media(lg) {
-      margin-left: calc(((1 * 100vw) - #{$lg}) / 2);
-    }
-
     &:hover:not(.swiper-button-disabled) {
       background: linear-gradient(90deg, $white1 0%, rgba($white1, 0) 100%);
     }
@@ -277,10 +285,6 @@
 
   &--next {
     right: 0;
-
-    @include media(lg) {
-      margin-right: calc(((1 * 100vw) - #{$lg}) / 2);
-    }
 
     &:hover:not(.swiper-button-disabled) {
       background: linear-gradient(90deg, rgba($white1, 0) 0%,  $white1 100%);

@@ -1,4 +1,4 @@
-import Swiper, {Navigation, Pagination} from 'swiper';
+import Swiper, {Navigation, Pagination} from "swiper";
 
 (() => {
   const sliders = document.querySelectorAll(".promo__slider");
@@ -15,9 +15,10 @@ import Swiper, {Navigation, Pagination} from 'swiper';
         prevEl: slider.querySelector(".swiper-button-prev"),
       },
       pagination: {
-        el: '.promo__slider-pagination',
-        type: 'bullets',
+        el: ".promo__slider-pagination",
+        type: "bullets",
         clickable: true,
+        bulletElement: "button",
       },
       a11y: {
         enabled: true,
