@@ -14,6 +14,7 @@
     <link rel="preload" href="fonts/Montserrat-SemiBold.woff" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-Bold.woff" as="font" crossorigin="anonymous">
   </head>
+
   <body>
     <header class="header header--no-js container">
       <figure class="header__logo">
@@ -23,9 +24,7 @@
           <img src="img/logo-mobile.svg" width="32" height="36" alt="Логотип компании Drink2Go." decoding="async">
         </picture>
 
-        <figcaption>
-          Интернет-магазин кофейных напитков
-        </figcaption>
+        <figcaption>Интернет-магазин кофейных напитков</figcaption>
       </figure>
 
       <nav class="header__nav">
@@ -47,7 +46,7 @@
 
       <ul class="header__user-list">
         <li class="header__user-item">
-          <a href="#" class="header__user-link">
+          <a class="header__user-link" href="#">
             <svg width="16" height="16" role="img" aria-label="Кнопка для авторизации.">
               <use href="img/sprite.svg#user-icon"></use>
             </svg>
@@ -57,7 +56,7 @@
         </li>
 
         <li class="header__user-item">
-          <a href="#" class="header__user-link">
+          <a class="header__user-link" href="#">
             <svg width="16" height="16" role="img" aria-label="Кнопка для перехода в корзину.">
               <use href="img/sprite.svg#cart-icon"></use>
             </svg>
@@ -72,33 +71,135 @@
       </button>
     </header>
 
-    <section class="advantages">
-      <div class="advantages__wrapper">
-        <h2 class="advantages__title title">Как это работает</h2>
-        <ul class="advantages__list">
-          <li class="advantages__item advantages__item-eco">
-            <p class="advantages__lead">
-              Функциональное питание содержит только полезные питательные вещества.
-            </p>
-          </li>
-          <li class="advantages__item advantages__item-easy">
-            <p class="advantages__lead">
-              Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
-            </p>
-          </li>
-          <li class="advantages__item advantages__item-change">
-            <p class="advantages__lead">
-              Замените один-два приема обычной еды на наше функциональное питание.
-            </p>
-          </li>
-          <li class="advantages__item advantages__item-result">
-            <p class="advantages__lead">
-              Уже через месяц наслаждайтесь изменениями к лучшему&nbsp;<br>вашего питомца!
-            </p>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <script src="js/script.js" type="module"></script>
+    <main class="main">
+      <section class="promo">
+        <h2 class="visually-hidden">Демонстрация основной продукции магазина</h2>
+
+        <div class="promo__slider swiper">
+          <ul class="promo__slider-wrapper swiper-wrapper">
+            <li class="promo__slide swiper-slide">
+              <figure class="promo__slide-image">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/slide-1-desktop.webp 1x, img/content/slide-1-desktop@2x.webp 2x">
+                  <source media="(min-width: 1440px)" srcset="img/content/slide-1-desktop.png 1x, img/content/slide-1-desktop@2x.png 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/content/slide-1-tablet.webp 1x, img/content/slide-1-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/content/slide-1-tablet.png 1x, img/content/slide-1-tablet@2x.png 2x">
+                  <source type="image/webp" srcset="img/content/slide-1-mobile.webp 1x, img/content/slide-1-mobile@2x.webp 2x">
+                  <img src="img/content/slide-1-mobile.png" srcset="img/content/slide-1-mobile@2x.png 2x" width="280" height="280" alt="Изображение Декаф Флэт Уайт">
+                </picture>
+              </figure>
+
+              <div class="promo__slide-info">
+                <b class="promo__slide-title">Декаф Флэт Уайт</b>
+
+                <p class="promo__slide-lead">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+
+                <div class="promo__slide-footer">
+                  <dl class="promo__slide-price">
+                    <div class="promo__slide-old-price">
+                      <dt class="visually-hidden">Старая цена</dt>
+                      <dd><s>295₽</s></dd>
+                    </div>
+
+                    <div class="promo__slide-new-price">
+                      <dt class="visually-hidden">Новая цена</dt>
+                      <dd>225₽</dd>
+                    </div>
+                  </dl>
+
+                  <a class="promo__slide-button button" href="#">Заказать</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="promo__slide swiper-slide">
+              <figure class="promo__slide-image">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/slide-2-desktop.webp 1x, img/content/slide-2-desktop@2x.webp 2x">
+                  <source media="(min-width: 1440px)" srcset="img/content/slide-2-desktop.png 1x, img/content/slide-2-desktop@2x.png 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/content/slide-2-tablet.webp 1x, img/content/slide-2-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/content/slide-2-tablet.png 1x, img/content/slide-2-tablet@2x.png 2x">
+                  <source type="image/webp" srcset="img/content/slide-2-mobile.webp 1x, img/content/slide-2-mobile@2x.webp 2x">
+                  <img src="img/content/slide-2-mobile.png" srcset="img/content/slide-2-mobile@2x.png 2x" width="280" height="280" alt="Изображение Лавандовый Латте">
+                </picture>
+              </figure>
+
+              <div class="promo__slide-info">
+                <b class="promo__slide-title">Лавандовый Латте</b>
+
+                <p class="promo__slide-lead">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+
+                <div class="promo__slide-footer">
+                  <dl class="promo__slide-price">
+                    <div class="promo__slide-old-price">
+                      <dt class="visually-hidden">Старая цена</dt>
+                      <dd><s>285₽</s></dd>
+                    </div>
+
+                    <div class="promo__slide-new-price">
+                      <dt class="visually-hidden">Новая цена</dt>
+                      <dd>265₽</dd>
+                    </div>
+                  </dl>
+
+                  <a class="promo__slide-button button" href="#">Заказать</a>
+                </div>
+              </div>
+            </li>
+
+            <li class="promo__slide swiper-slide">
+              <figure class="promo__slide-image">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/slide-3-desktop.webp 1x, img/content/slide-3-desktop@2x.webp 2x">
+                  <source media="(min-width: 1440px)" srcset="img/content/slide-3-desktop.png 1x, img/content/slide-3-desktop@2x.png 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/content/slide-3-tablet.webp 1x, img/content/slide-3-tablet@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/content/slide-3-tablet.png 1x, img/content/slide-3-tablet@2x.png 2x">
+                  <source type="image/webp" srcset="img/content/slide-3-mobile.webp 1x, img/content/slide-3-mobile@2x.webp 2x">
+                  <img src="img/content/slide-3-mobile.png" srcset="img/content/slide-3-mobile@2x.png 2x" width="280" height="280" alt="Изображение Тройной Эспрессо">
+                </picture>
+              </figure>
+
+              <div class="promo__slide-info">
+                <b class="promo__slide-title">Тройной Эспрессо</b>
+
+                <p class="promo__slide-lead">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+
+                <div class="promo__slide-footer">
+                  <dl class="promo__slide-price">
+                    <div class="promo__slide-old-price">
+                      <dt class="visually-hidden">Старая цена</dt>
+                      <dd><s>395₽</s></dd>
+                    </div>
+
+                    <div class="promo__slide-new-price">
+                      <dt class="visually-hidden">Новая цена</dt>
+                      <dd>375₽</dd>
+                    </div>
+                  </dl>
+
+                  <a class="promo__slide-button button button--disabled" href="#">Заказать</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="promo__slider-pagination"></div>
+
+          <button class="promo__slider-button promo__slider-button--prev swiper-button-prev" type="button">
+            <svg width="11" height="20" role="img" aria-label="Посмотреть предыдущий отзыв.">
+              <use href="img/sprite.svg#arrow-icon"></use>
+            </svg>
+          </button>
+
+          <button class="promo__slider-button promo__slider-button--next swiper-button-next" type="button">
+            <svg width="11" height="20" role="img" aria-label="Посмотреть следующий отзыв.">
+              <use href="img/sprite.svg#arrow-icon"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script.min.js" type="module"></script>
   </body>
 </html>

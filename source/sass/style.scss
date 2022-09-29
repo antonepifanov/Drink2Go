@@ -1,3 +1,4 @@
+// Global styles
 @import "global/variables";
 @import "global/mixins";
 @import "global/reboot";
@@ -5,4 +6,13 @@
 @import "global/typography";
 @import "global/utils";
 
+// Swiper
+@import "../../node_modules/swiper/swiper";
+
+// Blocks
 @import "blocks/header";
+@import "blocks/main";
+@import "blocks/promo";
+
+// Elements
+@import "elements/button";

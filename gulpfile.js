@@ -5,8 +5,9 @@ import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
 import rename from 'gulp-rename';
-import htmlmin from 'gulp-htmlmin';
-import terser from 'gulp-terser';
+import webpack from 'webpack';
+import webpackStream from 'webpack-stream';
+import webpackConfig from './webpack.config.js';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
@@ -39,9 +40,9 @@ const html = () => {
 // Scripts
 
 const scripts = () => {
-  return gulp.src('source/js/**/*.js')
+  return gulp.src('./source/js/script.js')
+    .pipe(webpackStream(webpackConfig, webpack))
     .pipe(gulp.dest('build/js'))
-    .pipe(browser.stream());
 }
 
 // Images
@@ -53,14 +54,14 @@ const optimizeImages = () => {
 }
 
 const copyImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src('source/img/*.{png,jpg}')
     .pipe(gulp.dest('build/img'))
 }
 
 // WebP
 
 const createWebp = () => {
-  return gulp.src('source/img/content/*.{png,jpg}')
+  return gulp.src('source/img/**/*.{png,jpg}')
     .pipe(squoosh({
       webp: {}
     }))
