@@ -9,10 +9,13 @@
 // Swiper
 @import "../../node_modules/swiper/swiper";
 
+// Elements
+@import "elements/button";
+@import "elements/badge";
+@import "elements/title";
+
 // Blocks
 @import "blocks/header";
 @import "blocks/main";
 @import "blocks/promo";
-
-// Elements
-@import "elements/button";
+@import "blocks/advantages";

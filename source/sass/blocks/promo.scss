@@ -2,6 +2,7 @@
   .swiper-button-disabled {
     color: $gray3;
     pointer-events: none;
+    cursor: auto;
   }
 }
 
@@ -19,6 +20,7 @@
   padding-right: $padding--sm;
   padding-top: 20px;
   padding-bottom: 60px;
+  height: auto;
 
   @include media(md) {
     gap: 20px;
@@ -104,6 +106,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-grow: 1;
 
   @include media(lg) {
     align-items: flex-start;
@@ -111,15 +114,10 @@
 }
 
 .promo__slide-title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
   font-size: 36px;
   font-weight: 700;
   line-height: 1.33;
   letter-spacing: 0.02em;
-  text-align: center;
 
   @include media(md) {
     font-size: 56px;
@@ -132,13 +130,6 @@
 
   &::before {
     content: "Новинка!";
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 1.33;
-    letter-spacing: 0.04em;
-    text-align: center;
-    color: $purple1;
   }
 }
 
@@ -166,6 +157,7 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  margin-top: auto;
 }
 
 .promo__slide-price {
@@ -271,7 +263,9 @@
     left: 0;
 
     &:hover:not(.swiper-button-disabled) {
-      background: linear-gradient(90deg, $white1 0%, rgba($white1, 0) 100%);
+      @include media(md) {
+        background: linear-gradient(90deg, $white1 0%, rgba($white1, 0) 100%);
+      }
     }
 
     &:active {
@@ -279,7 +273,9 @@
     }
 
     &:focus-visible:not(.swiper-button-disabled) {
-      background: linear-gradient(90deg, $white1 0%, rgba($white1, 0) 100%);
+      @include media(md) {
+        background: linear-gradient(90deg, $white1 0%, rgba($white1, 0) 100%);
+      }
     }
   }
 
@@ -287,7 +283,9 @@
     right: 0;
 
     &:hover:not(.swiper-button-disabled) {
-      background: linear-gradient(90deg, rgba($white1, 0) 0%,  $white1 100%);
+      @include media(md) {
+        background: linear-gradient(90deg, rgba($white1, 0) 0%,  $white1 100%);
+      }
     }
 
     &:active {
@@ -295,7 +293,9 @@
     }
 
     &:focus-visible:not(.swiper-button-disabled) {
-      background: linear-gradient(90deg, rgba($white1, 0) 0%,  $white1 100%);
+      @include media(md) {
+        background: linear-gradient(90deg, rgba($white1, 0) 0%,  $white1 100%);
+      }
     }
 
     svg {

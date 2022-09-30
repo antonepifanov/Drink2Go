@@ -72,6 +72,8 @@
     </header>
 
     <main class="main">
+      <h1 class="visually-hidden">Интернет-магазин кофейных напитков Drink2Go</h1>
+
       <section class="promo">
         <h2 class="visually-hidden">Демонстрация основной продукции магазина</h2>
 
@@ -90,7 +92,7 @@
               </figure>
 
               <div class="promo__slide-info">
-                <b class="promo__slide-title">Декаф Флэт Уайт</b>
+                <b class="promo__slide-title badge">Декаф Флэт Уайт</b>
 
                 <p class="promo__slide-lead">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
 
@@ -125,7 +127,7 @@
               </figure>
 
               <div class="promo__slide-info">
-                <b class="promo__slide-title">Лавандовый Латте</b>
+                <b class="promo__slide-title badge">Лавандовый Латте</b>
 
                 <p class="promo__slide-lead">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
 
@@ -160,7 +162,7 @@
               </figure>
 
               <div class="promo__slide-info">
-                <b class="promo__slide-title">Тройной Эспрессо</b>
+                <b class="promo__slide-title badge">Тройной Эспрессо</b>
 
                 <p class="promo__slide-lead">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
 
@@ -185,18 +187,56 @@
 
           <div class="promo__slider-pagination"></div>
 
-          <button class="promo__slider-button promo__slider-button--prev swiper-button-prev" type="button">
-            <svg width="11" height="20" role="img" aria-label="Посмотреть предыдущий отзыв.">
+          <button class="promo__slider-button promo__slider-button--prev swiper-button-prev" type="button" aria-label="Посмотреть предыдущий слайд.">
+            <svg width="11" height="20" aria-hidden="true">
               <use href="img/sprite.svg#arrow-icon"></use>
             </svg>
           </button>
 
-          <button class="promo__slider-button promo__slider-button--next swiper-button-next" type="button">
-            <svg width="11" height="20" role="img" aria-label="Посмотреть следующий отзыв.">
+          <button class="promo__slider-button promo__slider-button--next swiper-button-next" type="button" aria-label="Посмотреть следующий слайд.">
+            <svg width="11" height="20" aria-hidden="true">
               <use href="img/sprite.svg#arrow-icon"></use>
             </svg>
           </button>
         </div>
+      </section>
+
+      <section class="advantages container">
+        <h2 class="advantages__title title badge">Главные причины выбрать Drink2Go</h2>
+
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <div class="advantges__item-essence">
+              <b>Скорость</b>
+
+              <p>Готовый напиток всегда под рукой — просто открой банку</p>
+            </div>
+          </li>
+
+          <li class="advantages__item">
+            <div class="advantges__item-essence">
+              <b>Удобство</b>
+
+              <p>Легко помещается и в карман,<br>и в маленькую сумочку</p>
+            </div>
+          </li>
+
+          <li class="advantages__item">
+            <div class="advantges__item-essence">
+              <b>Бодрость</b>
+
+              <p>Сбалансированная доза кофеина даст мощный заряд энергии</p>
+            </div>
+          </li>
+
+          <li class="advantages__item">
+            <div class="advantges__item-essence">
+              <b>Экологичность</b>
+
+              <p>Вся упаковка сделана<br>из перерабатываемых материалов</p>
+            </div>
+          </li>
+        </ul>
       </section>
     </main>
 
