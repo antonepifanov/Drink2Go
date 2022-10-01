@@ -52,6 +52,7 @@
   },
   "type": "module",
   "dependencies": {
+    "nouislider": "^15.6.1",
     "swiper": "^7.4.1"
   }
 }

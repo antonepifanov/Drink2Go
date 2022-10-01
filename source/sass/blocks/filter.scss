@@ -1,0 +1,103 @@
+.filter {
+
+}
+
+.catalog__filter {
+}
+.filter {
+}
+.filter__settings {
+}
+.filter__setting {
+}
+.filter__fieldset {
+}
+
+.filter__range {
+}
+.filter__range-slider {
+  border: none;
+  box-shadow: none;
+  height: 24px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  background-clip: content-box;
+  background-color: $gray5;
+
+  &[disabled] {
+    .noUi-connect {
+      background-color: $gray3;
+    }
+
+    .noUi-handle {
+      border: 2px solid $gray3;
+      pointer-events: none;
+      cursor: auto;
+    }
+  }
+
+  .noUi-connects {
+    height: 4px;
+    top: -1px;
+  }
+
+  .noUi-connect {
+    background-color: $purple2;
+  }
+
+  .noUi-handle {
+    width: 24px;
+    height: 24px;
+    border: 2px solid $purple2;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(calc(-50% + 2px));
+    transition: all $default-transition-settings;
+    cursor: pointer;
+
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      border: 2px solid $purple1;
+
+      &::after {
+        background-color: $purple1;
+      }
+    }
+
+    &:focus-visible {
+      outline: none;
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      background-color: rgba($purple1, 0.25);
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all $default-transition-settings;
+    }
+  }
+}
+.filter__range-inputs {
+}
+.filter__range-input {
+}
+.filter__range-input--min {
+}
+.filter__range-input--max {
+}

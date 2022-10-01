@@ -5,6 +5,7 @@
 @import "global/fonts";
 @import "global/typography";
 @import "global/utils";
+@import "global/nouislider";
 
 // Swiper
 @import "../../node_modules/swiper/swiper";
@@ -19,3 +20,5 @@
 @import "blocks/main";
 @import "blocks/promo";
 @import "blocks/advantages";
+@import "blocks/catalog";
+@import "blocks/filter";

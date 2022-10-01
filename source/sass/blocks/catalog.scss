@@ -1,0 +1,40 @@
+.catalog {
+  background-color: $gray4;
+  padding-top: 50px;
+  padding-bottom: 44px;
+
+  @include media(md) {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+
+  @include media(lg) {
+    padding-top: 100px;
+    padding-bottom: 120px;
+  }
+}
+
+.catalog__title {
+  margin-bottom: 20px;
+
+  @include media(lg) {
+    margin-bottom: 40px;
+  }
+
+  &::before {
+    content: "Каталог";
+  }
+
+}
+
+.catalog__filter {
+
+}
+
+.catalog__sort {
+
+}
+
+.catalog__list {
+
+}

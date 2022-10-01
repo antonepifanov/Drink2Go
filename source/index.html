@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <title>Интернет-магазин кофейных напитков Drink2Go</title>
@@ -46,8 +46,8 @@
 
       <ul class="header__user-list">
         <li class="header__user-item">
-          <a class="header__user-link" href="#">
-            <svg width="16" height="16" role="img" aria-label="Кнопка для авторизации.">
+          <a class="header__user-link" href="#" aria-label="Кнопка для авторизации.">
+            <svg width="16" height="16">
               <use href="img/sprite.svg#user-icon"></use>
             </svg>
 
@@ -56,8 +56,8 @@
         </li>
 
         <li class="header__user-item">
-          <a class="header__user-link" href="#">
-            <svg width="16" height="16" role="img" aria-label="Кнопка для перехода в корзину.">
+          <a class="header__user-link" href="#" aria-label="Кнопка для перехода в корзину.">
+            <svg width="16" height="16">
               <use href="img/sprite.svg#cart-icon"></use>
             </svg>
 
@@ -185,7 +185,7 @@
             </li>
           </ul>
 
-          <div class="promo__slider-pagination"></div>
+          <div class="promo__slider-pagination" aria-label="Пагинация слайдера."></div>
 
           <button class="promo__slider-button promo__slider-button--prev swiper-button-prev" type="button" aria-label="Посмотреть предыдущий слайд.">
             <svg width="11" height="20" aria-hidden="true">
@@ -237,6 +237,76 @@
             </div>
           </li>
         </ul>
+      </section>
+
+      <section class="catalog container">
+        <h2 class="catalog__title title badge">Каталог кофейных напитков</h2>
+
+        <div class="catalog__content">
+          <form class="catalog__filter filter" action="https://echo.htmlacademy.ru" method="post">
+            <h3 class="visually-hidden">Фильтр для каталога товаров магазина</h3>
+
+            <ul class="filter__settings">
+              <li class="filter__setting">
+                <fieldset class="filter__fieldset">
+                  <legend>Цена</legend>
+
+                  <div class="filter__range">
+                    <div class="filter__range-slider"></div>
+
+                    <ul class="filter__range-inputs">
+                      <li class="filter__range-input filter__range-input--min">
+                        <input id="min-price" type="number" name="min-price" min="0" max="990" placeholder="0">
+                        <label class="visually-hidden" for="min-price">Установите минимальную цену</label>
+                      </li>
+
+                      <li class="filter__range-input filter__range-input--max">
+                        <input id="max-price" type="number" name="max-price" min="10" max="1000" value="900">
+                        <label class="visually-hidden" for="max-price">Установите максимальную цену</label>
+                      </li>
+                    </ul>
+                  </div>
+                </fieldset>
+              </li>
+
+              <li class="filter__setting">
+                <fieldset class="filter__fieldset">
+                  <legend>Наличие молока</legend>
+                </fieldset>
+              </li>
+
+              <li class="filter__setting">
+                <fieldset class="filter__fieldset">
+                  <legend>Страна произрастания</legend>
+                </fieldset>
+              </li>
+            </ul>
+
+            <ul class="filter__buttons">
+              <li class="filter__button">
+
+              </li>
+
+              <li class="filter__button">
+
+              </li>
+            </ul>
+          </form>
+
+          <div class="catalog__products">
+            <div class="catalog__sort">
+
+            </div>
+
+            <ul class="catalog__list">
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="catalog__pagination">
+
+        </div>
       </section>
     </main>
 
