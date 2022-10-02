@@ -4,6 +4,7 @@ import noUiSlider from "nouislider";
   const range = document.querySelector(".filter__range-slider");
   const minPriceInput = document.querySelector(".filter__range-input--min input:not([disabled])");
   const maxPriceInput = document.querySelector(".filter__range-input--max input:not([disabled])");
+  const resetButton = document.querySelector(".filter button[type=reset]:not([disabled])");
 
   noUiSlider.create(range, {
     start: [0, 900],
@@ -60,4 +61,10 @@ import noUiSlider from "nouislider";
       range.noUiSlider.set([null, this.value]);
     });
   };
+
+  if (resetButton) {
+    resetButton.addEventListener('click', function () {
+      range.noUiSlider.reset();
+    });
+  }
 })();

@@ -239,73 +239,123 @@
         </ul>
       </section>
 
-      <section class="catalog container">
-        <h2 class="catalog__title title badge">Каталог кофейных напитков</h2>
+      <section class="catalog">
+        <div class="catalog__wrapper container"><h2 class="catalog__title title badge">Каталог кофейных напитков</h2>
 
-        <div class="catalog__content">
-          <form class="catalog__filter filter" action="https://echo.htmlacademy.ru" method="post">
-            <h3 class="visually-hidden">Фильтр для каталога товаров магазина</h3>
+          <div class="catalog__content">
+            <form class="catalog__filter filter" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
+              <h3 class="visually-hidden">Фильтр для каталога товаров магазина</h3>
 
-            <ul class="filter__settings">
-              <li class="filter__setting">
-                <fieldset class="filter__fieldset">
-                  <legend>Цена</legend>
+              <ul class="filter__settings">
+                <li class="filter__setting">
+                  <fieldset class="filter__fieldset">
+                    <legend>Цена</legend>
 
-                  <div class="filter__range">
-                    <div class="filter__range-slider"></div>
+                    <div class="filter__range">
+                      <div class="filter__range-slider"></div>
 
-                    <ul class="filter__range-inputs">
-                      <li class="filter__range-input filter__range-input--min">
-                        <input id="min-price" type="number" name="min-price" min="0" max="990" step="1" placeholder="0" disabled>
-                        <label class="visually-hidden" for="min-price">Установите минимальную цену</label>
+                      <ul class="filter__range-inputs">
+                        <li class="filter__range-input filter__range-input--min">
+                          <input id="min-price" type="number" name="min-price" min="0" max="990" step="10" placeholder="0">
+                          <label class="visually-hidden" for="min-price">Установите минимальную цену</label>
+                        </li>
+
+                        <li class="filter__range-input filter__range-input--max">
+                          <input id="max-price" type="number" name="max-price" min="10" max="1000" step="10" value="900">
+                          <label class="visually-hidden" for="max-price">Установите максимальную цену</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </fieldset>
+                </li>
+
+                <li class="filter__setting">
+                  <fieldset class="filter__fieldset">
+                    <legend>Наличие молока</legend>
+
+                    <ul class="filter__fieldset-list">
+                      <li class="filter__fieldset-item">
+                        <input class="filter__fieldset-input filter__fieldset-input--radio visually-hidden" id="no-matter" type="radio" name="milk" value="Неважно" checked>
+                        <label class="filter__fieldset-label" for="no-matter">Неважно</label>
                       </li>
 
-                      <li class="filter__range-input filter__range-input--max">
-                        <input id="max-price" type="number" name="max-price" min="10" max="1000" step="1" value="900">
-                        <label class="visually-hidden" for="max-price">Установите максимальную цену</label>
+                      <li class="filter__fieldset-item">
+                        <input class="filter__fieldset-input filter__fieldset-input--radio visually-hidden" id="animal" type="radio" name="milk" value="Только животное">
+                        <label class="filter__fieldset-label" for="animal">Только животное</label>
+                      </li>
+
+                      <li class="filter__fieldset-item">
+                        <input class="filter__fieldset-input filter__fieldset-input--radio visually-hidden" id="vegetables" type="radio" name="milk" value="Только растительное">
+                        <label class="filter__fieldset-label" for="vegetables">Только растительное</label>
+                      </li>
+
+                      <li class="filter__fieldset-item">
+                        <input class="filter__fieldset-input filter__fieldset-input--radio visually-hidden" id="without" type="radio" name="milk" value="Без молока" disabled>
+                        <label class="filter__fieldset-label" for="without">Без молока</label>
                       </li>
                     </ul>
-                  </div>
-                </fieldset>
-              </li>
+                  </fieldset>
+                </li>
 
-              <li class="filter__setting">
-                <fieldset class="filter__fieldset">
-                  <legend>Наличие молока</legend>
-                </fieldset>
-              </li>
+                <li class="filter__setting">
+                  <fieldset class="filter__fieldset">
+                    <legend>Страна произрастания</legend>
 
-              <li class="filter__setting">
-                <fieldset class="filter__fieldset">
-                  <legend>Страна произрастания</legend>
-                </fieldset>
-              </li>
-            </ul>
+                    <ul class="filter__fieldset-list">
+                      <li class="filter__fieldset-item">
+                        <input class="filter__fieldset-input filter__fieldset-input--checkbox visually-hidden" id="Brazil" type="checkbox" name="Brazil" checked>
+                        <label class="filter__fieldset-label" for="Brazil">Бразилия</label>
+                      </li>
 
-            <ul class="filter__buttons">
-              <li class="filter__button">
+                      <li class="filter__fieldset-item">
+                        <input class="filter__fieldset-input filter__fieldset-input--checkbox visually-hidden" id="Ethiopia" type="checkbox" name="Ethiopia">
+                        <label class="filter__fieldset-label" for="Ethiopia">Эфиопия</label>
+                      </li>
 
-              </li>
+                      <li class="filter__fieldset-item">
+                        <input class="filter__fieldset-input filter__fieldset-input--checkbox visually-hidden" id="Columbia" type="checkbox" name="Columbia">
+                        <label class="filter__fieldset-label" for="Columbia">Колумбия</label>
+                      </li>
 
-              <li class="filter__button">
+                      <li class="filter__fieldset-item">
+                        <input class="filter__fieldset-input filter__fieldset-input--checkbox visually-hidden" id="Costa-Rica" type="checkbox" name="Costa-Rica">
+                        <label class="filter__fieldset-label" for="Costa-Rica">Коста-Рика</label>
+                      </li>
 
-              </li>
-            </ul>
-          </form>
+                      <li class="filter__fieldset-item">
+                        <input class="filter__fieldset-input filter__fieldset-input--checkbox visually-hidden" id="Peru" type="checkbox" name="Peru" disabled>
+                        <label class="filter__fieldset-label" for="Peru">Перу</label>
+                      </li>
+                    </ul>
+                  </fieldset>
+                </li>
+              </ul>
 
-          <div class="catalog__products">
-            <div class="catalog__sort">
+              <ul class="filter__buttons">
+                <li class="filter__button">
+                  <button class="button" type="submit">Применить фильтр</button>
+                </li>
 
+                <li class="filter__button">
+                  <button class="button" type="reset">Сбросить фильтр</button>
+                </li>
+              </ul>
+            </form>
+
+            <div class="catalog__products">
+              <div class="catalog__sort">
+
+              </div>
+
+              <ul class="catalog__list">
+
+              </ul>
             </div>
-
-            <ul class="catalog__list">
-
-            </ul>
           </div>
-        </div>
 
-        <div class="catalog__pagination">
+          <div class="catalog__pagination">
 
+          </div>
         </div>
       </section>
     </main>

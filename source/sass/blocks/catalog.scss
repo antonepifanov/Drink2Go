@@ -24,10 +24,26 @@
   &::before {
     content: "Каталог";
   }
+}
 
+.catalog__content {
+  @include media(lg) {
+    display: grid;
+    grid-template-columns: 318px 1fr;
+    gap: 30px;
+  }
 }
 
 .catalog__filter {
+  margin-bottom: 36px;
+
+  @include media(md) {
+    margin-bottom: 44px;
+  }
+
+  @include media(lg) {
+    margin-bottom: 0;
+  }
 
 }
 
