@@ -1,20 +1,61 @@
 .filter {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
 
+  @include media(md) {
+    gap: 40px;
+  }
 }
 
-.catalog__filter {
-}
-.filter {
-}
 .filter__settings {
+  @include listres;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include media(md) {
+    flex-direction: row;
+    gap: 21px;
+  }
+
+  @include media(lg) {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
+
 .filter__setting {
 }
+
 .filter__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  legend {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    padding: 0;
+    margin-bottom: 22px;
+
+    @include media(md) {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .filter__range {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  @include media(md) {
+    gap: 22px;
+  }
 }
+
 .filter__range-slider {
   border: none;
   box-shadow: none;
@@ -36,6 +77,12 @@
     }
   }
 
+  .noUi-base {
+    width: calc(100% - 24px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .noUi-connects {
     height: 4px;
     top: -1px;
@@ -51,9 +98,11 @@
     border: 2px solid $purple2;
     border-radius: 50%;
     top: 50%;
+    right: -12px;
     transform: translateY(calc(-50% + 2px));
     transition: all $default-transition-settings;
     cursor: pointer;
+    box-shadow: none;
 
     &:hover {
       &::after {
@@ -93,9 +142,77 @@
     }
   }
 }
+
 .filter__range-inputs {
+  @include listres;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 44px;
+
+  @include media(md) {
+    gap: 35px;
+  }
+
+  @include media(lg) {
+    gap: 50px;
+  }
 }
+
 .filter__range-input {
+  width: calc(100% - 44px);
+
+  @include media(md) {
+    width: calc(100% - 35px);
+  }
+
+  @include media(lg) {
+    width: calc(100% - 50px);
+  }
+
+  input {
+    @include inputres;
+    appearance: textfield;
+    text-align: center;
+    width: 100%;
+    padding: 5px 10px;
+    border: 2px solid $purple2;
+    border-radius: 4px;
+    height: 38px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    transition: all $default-transition-settings;
+
+    @include media(md) {
+      height: 40px;
+    }
+
+    &:focus-visible {
+      border: 2px solid $purple3;
+
+      &::placeholder {
+        font-size: 0;
+      }
+    }
+
+    &[disabled] {
+      border: 2px solid $gray5;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      height: auto;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: $gray3;
+    }
+  }
 }
 .filter__range-input--min {
 }
