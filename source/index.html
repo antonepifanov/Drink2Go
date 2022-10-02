@@ -344,7 +344,14 @@
 
             <div class="catalog__products">
               <div class="catalog__sort">
+                <strong>Сортировка:</strong>
 
+                <select class="catalog__sort-select" name="sort">
+                  <option value="" selected>по умолчанию</option>
+                  <option>сначала дорогие</option>
+                  <option>сначала дешёвые</option>
+                  <option>высокий рейтинг</option>
+                </select>
               </div>
 
               <ul class="catalog__list">
@@ -360,6 +367,6 @@
       </section>
     </main>
 
-    <script src="js/script.min.js" type="module"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>

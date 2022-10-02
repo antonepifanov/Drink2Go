@@ -5,10 +5,13 @@
 @import "global/fonts";
 @import "global/typography";
 @import "global/utils";
-@import "global/nouislider";
 
 // Swiper
 @import "../../node_modules/swiper/swiper";
+
+//Libs
+@import "libs/nouislider";
+@import "libs/custom-select";
 
 // Elements
 @import "elements/button";

@@ -27,9 +27,6 @@
   }
 }
 
-.filter__setting {
-}
-
 .filter__fieldset {
   border: none;
   padding: 0;
@@ -217,7 +214,7 @@
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
-      -webkit-appearance: none;
+      appearance: none;
       height: auto;
     }
 
@@ -239,9 +236,6 @@
   @include media(md) {
     gap: 20px;
   }
-}
-
-.filter__fieldset-item {
 }
 
 .filter__fieldset-input {
@@ -468,6 +462,7 @@
 
     @include media(md) {
       width: max-content;
+      padding: 4px;
       min-height: 40px;
     }
 

@@ -44,11 +44,128 @@
   @include media(lg) {
     margin-bottom: 0;
   }
-
 }
 
 .catalog__sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
 
+  @include media(md) {
+    margin-bottom: 26px;
+    margin-left: auto;
+    width: 290px;
+  }
+
+  strong {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .custom-select-container {
+    flex-shrink: 0;
+  }
+
+  .custom-select-opener {
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: $purple1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px 10px;
+    height: 32px;
+    border-radius: 4px;
+    transition: background-color $default-transition-settings;
+
+    &:hover {
+      @include media(md) {
+        background-color: $gray1;
+      }
+    }
+
+    &:focus-visible {
+      outline: none;
+      background-color: $gray1;
+      border-bottom: none;
+    }
+
+    &::after {
+      content: "";
+      position: relative;
+      top: -1px;
+      transform: rotate(315deg);
+      width: 7px;
+      height: 7px;
+      border-left: 2px solid $purple1;
+      border-bottom: 2px solid $purple1;
+      flex-shrink: 0;
+      pointer-events: none;
+      transition: all $default-transition-settings;
+    }
+  }
+
+  .is-open {
+    .custom-select-opener::after {
+      transform: rotate(135deg);
+      top: 2px;
+    }
+  }
+
+  .custom-select-panel {
+    width: 190px;
+    top: calc(100% + 10px);
+    border-radius: 4px;
+    right: 0;
+    background-color: $white1;
+    box-shadow: 0px 5px 15px 0px rgba($black2, 0.2);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .custom-select-option {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 8px 20px;
+    height: 40px;
+    border-bottom: 1px solid $gray1;
+    cursor: pointer;
+    transition: background-color $default-transition-settings;
+
+    &:hover {
+      @include media(md) {
+        background-color: $gray1;
+        border-bottom: none;
+      }
+    }
+
+    &:focus-visible {
+      outline: none;
+      background-color: $gray1;
+      border-bottom: none;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .has-focus {
+    background-color: $gray1;
+  }
+
+  .is-selected {
+    background-color: $purple1;
+    color: $white1;
+    border-bottom: none;
+    pointer-events: none;
+  }
 }
 
 .catalog__list {
