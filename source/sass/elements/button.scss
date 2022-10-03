@@ -38,7 +38,8 @@
     background-color: $purple2;
   }
 
-  &--disabled {
+  &--disabled,
+  &[disabled] {
     background-color: $gray3;
     pointer-events: none;
 
