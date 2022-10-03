@@ -1,7 +1,7 @@
 .button {
   @include btnres;
   text-decoration: none;
-  padding: 2px;
+  padding: 5px;
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
@@ -11,9 +11,10 @@
   background-color: $purple1;
   color: $white1;
   border-radius: 4px;
-  transition: all $default-transition-settings;
+  transition: background-color $default-transition-settings, color $default-transition-settings;
 
-  &[type="reset"] {
+  &[type="reset"],
+  &--alt {
     background-color: $white1;
     color: $purple1;
 
@@ -42,6 +43,7 @@
   &[disabled] {
     background-color: $gray3;
     pointer-events: none;
+    color: $white1;
 
     &[type="reset"] {
       background-color: $gray5;

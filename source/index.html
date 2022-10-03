@@ -343,6 +343,8 @@
             </form>
 
             <div class="catalog__products">
+              <h3 class="visually-hidden">Список продуктов магазина Drink2Go</h3>
+
               <div class="catalog__sort">
                 <strong>Сортировка:</strong>
 
@@ -637,8 +639,50 @@
             </div>
           </div>
 
-          <div class="catalog__pagination">
+          <div class="catalog__pagination pagination">
+            <h3 class="visually-hidden">Переход между страницами с продуктами</h3>
 
+            <ol class="pagination__list">
+              <!--Класс для блокировки кнопок Назад и Вперёд добавляется средствами JavaScript к соответствующей кнопке в зависимости от того, какая страница текущая. Попробуйте, например, добавить к первой ссылке с номером страницы класс .pagination__numbers-button--current -->
+              <li class="pagination__item">
+                <a class="pagination__button pagination__button--prev button button--alt" href="#" aria-label="Предыдущая страница">
+                  <svg width="6" height="10" aria-hidden="true">
+                    <use href="img/sprite.svg#pagination-arrow-icon"></use>
+                  </svg>
+
+                  <span aria-hidden="true">Назад</span>
+                </a>
+              </li>
+
+              <!--Заблокированной ссылке добавляется класс .pagination__numbers-button--disabled-->
+              <!--Ссылке на текущую страницу добавляется класс .pagination__numbers-button--current-->
+              <!--Класс .pagination__numbers-button--current в один момент времени должен быть у одной из ссылок с номерами страниц и может быть только у одной из ссылок-->
+              <li class="pagination__item">
+                <ol class="pagination__numbers">
+                  <li class="pagination__numbers-item">
+                    <a class="pagination__numbers-button button button--alt" href="#" aria-label="Переход на 1 страницу">1</a>
+                  </li>
+
+                  <li class="pagination__numbers-item">
+                    <a class="pagination__numbers-button pagination__numbers-button--current button button--alt" href="#" aria-label="Переход на 2 страницу">2</a>
+                  </li>
+
+                  <li class="pagination__numbers-item">
+                    <a class="pagination__numbers-button button button--alt" href="#" aria-label="Переход на 3 страницу">3</a>
+                  </li>
+                </ol>
+              </li>
+
+              <li class="pagination__item">
+                <a class="pagination__button pagination__button--next button button--alt" href="#" aria-label="Следующая страница">
+                  <svg width="6" height="10" aria-hidden="true">
+                    <use href="img/sprite.svg#pagination-arrow-icon"></use>
+                  </svg>
+
+                  <span aria-hidden="true">Вперёд</span>
+                </a>
+              </li>
+            </ol>
           </div>
         </div>
       </section>

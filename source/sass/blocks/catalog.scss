@@ -27,7 +27,14 @@
 }
 
 .catalog__content {
+  margin-bottom: 40px;
+
+  @include media(md) {
+    margin-bottom: 70px;
+  }
+
   @include media(lg) {
+    margin-bottom: 60px;
     display: grid;
     grid-template-columns: 318px 1fr;
     gap: 30px;
@@ -57,9 +64,6 @@
     margin-left: auto;
     gap: 10px;
     width: 310px;
-  }
-
-  @include media(lg) {
   }
 
   strong {
@@ -188,7 +192,4 @@
   @include media(lg) {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
-.catalog__card {
 }

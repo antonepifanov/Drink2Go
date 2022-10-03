@@ -51,6 +51,7 @@
 }
 
 @mixin btnres {
+  font-family: $main-font;
   padding: 0;
   background: none;
   border: 0;

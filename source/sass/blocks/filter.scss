@@ -457,17 +457,20 @@
 
 .filter__button {
   button {
+    font-size: 13px;
+    line-height: 1.85;
     width: 160px;
     min-height: 45px;
 
     @include media(md) {
+      font-size: 14px;
       width: max-content;
-      padding: 4px;
       min-height: 40px;
     }
 
     @include media(lg) {
       width: 150px;
+      padding: 4px;
     }
   }
 }
