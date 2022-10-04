@@ -122,7 +122,7 @@
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/content/slide-2-tablet.webp 1x, img/content/slide-2-tablet@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/content/slide-2-tablet.png 1x, img/content/slide-2-tablet@2x.png 2x">
                   <source type="image/webp" srcset="img/content/slide-2-mobile.webp 1x, img/content/slide-2-mobile@2x.webp 2x">
-                  <img src="img/content/slide-2-mobile.png" srcset="img/content/slide-2-mobile@2x.png 2x" width="280" height="280" alt="Изображение Лавандовый Латте">
+                  <img src="img/content/slide-2-mobile.png" srcset="img/content/slide-2-mobile@2x.png 2x" width="280" height="280" alt="Изображение Лавандовый Латте" loading="lazy">
                 </picture>
               </figure>
 
@@ -157,7 +157,7 @@
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/content/slide-3-tablet.webp 1x, img/content/slide-3-tablet@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/content/slide-3-tablet.png 1x, img/content/slide-3-tablet@2x.png 2x">
                   <source type="image/webp" srcset="img/content/slide-3-mobile.webp 1x, img/content/slide-3-mobile@2x.webp 2x">
-                  <img src="img/content/slide-3-mobile.png" srcset="img/content/slide-3-mobile@2x.png 2x" width="280" height="280" alt="Изображение Тройной Эспрессо">
+                  <img src="img/content/slide-3-mobile.png" srcset="img/content/slide-3-mobile@2x.png 2x" width="280" height="280" alt="Изображение Тройной Эспрессо" loading="lazy">
                 </picture>
               </figure>
 
@@ -185,7 +185,9 @@
             </li>
           </ul>
 
-          <div class="promo__slider-pagination" aria-label="Пагинация слайдера."></div>
+          <div class="promo__slider-pagination">
+            <h3 class="visually-hidden">Пагинация слайдера</h3>
+          </div>
 
           <button class="promo__slider-button promo__slider-button--prev swiper-button-prev" type="button" aria-label="Посмотреть предыдущий слайд.">
             <svg width="11" height="20" aria-hidden="true">
@@ -686,6 +688,23 @@
           </div>
         </div>
       </section>
+
+      <section class="map">
+        <h2 class="visually-hidden">Карта с местоположением магазина Drtink2G0</h2>
+
+        <figure class="map__picture">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/content/map-desktop.webp 1x, img/content/map-desktop@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/content/map-desktop.png 1x, img/content/map-desktop@2x.png 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/map-tablet.webp 1x, img/content/map-tablet@2x.webp 2x">
+            <source media="(min-width: 768px)" srcset="img/content/map-tablet.png 1x, img/content/map-tablet@2x.png 2x">
+            <source type="image/webp" srcset="img/content/map-mobile.webp 1x, img/content/map-mobile@2x.webp 2x">
+            <img src="img/content/map-mobile.png" srcset="img/content/map-mobile@2x.png 2x" width="320" height="420" alt="Карта с указанием местоположения магазина Drink2Go, расположенного по адресу г. Санкт-Петербург, набережная реки Карповки, дом 5."  loading="lazy">
+          </picture>
+        </figure>
+
+        <div class ="map__inter" id="map"></div>
+      </section>
     </main>
 
     <footer class="footer container">
@@ -693,7 +712,7 @@
         <figure class="footer__logo">
           <picture>
             <source media="(min-width: 768px)" srcset="img/logo-desktop.svg">
-            <img src="img/logo-tablet.svg" width="82" height="36" alt="Логотип компании Drink2Go." decoding="async">
+            <img src="img/logo-tablet.svg" width="82" height="36" alt="Логотип компании Drink2Go.">
           </picture>
 
           <figcaption>Интернет-магазин кофейных напитков</figcaption>
@@ -702,7 +721,7 @@
         <ul class="footer__social-list">
           <li class="footer__social-item">
             <a class="footer__social-link" href="#" rel="noopener" target="_blank">
-              <svg width="20" height="20">
+              <svg width="20" height="20" aria-hidden="true">
                 <use href="img/sprite.svg#vk-icon"></use>
               </svg>
 
@@ -712,7 +731,7 @@
 
           <li class="footer__social-item">
             <a class="footer__social-link" href="#" rel="noopener" target="_blank">
-              <svg width="22" height="22">
+              <svg width="22" height="22" aria-hidden="true">
                 <use href="img/sprite.svg#pinterest-icon"></use>
               </svg>
 
@@ -722,7 +741,7 @@
 
           <li class="footer__social-item">
             <a class="footer__social-link" href="#" rel="noopener" target="_blank">
-              <svg width="20" height="20">
+              <svg width="20" height="20" aria-hidden="true">
                 <use href="img/sprite.svg#ok-icon"></use>
               </svg>
 
@@ -772,18 +791,19 @@
 
         <address>Санкт-Петербург, набережная реки Карповки, дом 5</address>
 
-        <a href="tel:+7 (999) 999-99-99">+7 (999) 999-99-99</a>
+        <a href="tel:+79999999999">+7 (999) 999-99-99</a>
       </div>
 
       <p class="footer__academy">
         Разработано в
         <a href="https://htmlacademy.ru/intensive/adaptive" rel="noopener" target="_blank">
-          <svg width="112" height="16">
+          <svg width="112" height="16" aria-hidden="true">
             <use href="img/sprite.svg#academy-icon"></use>
           </svg>
+
+          <span class="visually-hidden">Ссылка для перехода на сайт HTMLAcademy</span>
         </a>
       </p>
-
     </footer>
 
     <script src="js/script.min.js"></script>

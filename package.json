@@ -53,6 +53,7 @@
   "type": "module",
   "dependencies": {
     "custom-select": "^1.1.15",
+    "leaflet": "1.7.1",
     "nouislider": "^15.6.1",
     "swiper": "^7.4.1"
   }
